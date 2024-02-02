@@ -98,6 +98,54 @@
     </div>
   </div>
 
+  <div class="bg">
+    <div class="news">News</div>
+    <div class="contract2">
+      <h1>사업단 소식</h1>
+      <div
+        style="
+          text-align: left;
+          word-wrap: break-word;
+          padding-left: 20px;
+          white-space: nowrap;
+        "
+      >
+        동의대학교 조기취업형 계약학과 <br />
+        사업단의 소식을 알려드립니다.
+      </div>
+
+      <button class="prev-button2">◀</button>
+      <button class="next-button2">▶</button>
+      <button class="image-button2">소식 더보기</button>
+    </div>
+
+    <div class="slide-container2">
+      <div class="slide-img">
+        <img class="slide2" src="@/assets/news1.png" alt="" />
+        <div class="caption">
+          미래형자동차학과 현대차블루핸즈(부산광역권) 간의 우수 인재 양성을 위한
+          MOU체결식 개최
+        </div>
+        <div class="year">2023.12.07</div>
+      </div>
+      <div class="slide-img">
+        <img class="slide2" src="@/assets/news2.jpg" alt="" />
+        <div class="caption">
+          스마트호스피탈리티학과 "제2회 호텔&레스토랑 산업전 참가"
+        </div>
+        <div class="year">2023.12.02</div>
+      </div>
+      <div class="slide-img">
+        <img class="slide2" src="@/assets/new3.jpg" alt="" />
+        <div class="caption">
+          청년인턴이 바라본 규제 혁신현장-스마트호스피탈리티학과 김권동 교수
+          인터뷰
+        </div>
+        <div class="year">2023.11.14</div>
+      </div>
+    </div>
+  </div>
+
   <headerView class="header" />
   <router-view />
 </template>
@@ -151,6 +199,13 @@ export default {
   height: 1350px;
   object-fit: cover;
 }
+.slide-container2 {
+  display: flex;
+  margin-left: 25%;
+  margin-top: -14%;
+  overflow: hidden;
+}
+
 .slide {
   flex: 1;
   text-align: center;
@@ -159,23 +214,65 @@ export default {
   box-sizing: border-box;
 }
 
-.prevBtn,
-.nextBtn {
-  position: absolute;
-  top: 23%;
-  background-color: rgb(255, 255, 255, 0);
-  color: white;
-  border: none;
-  font-size: 1.2em; /* 버튼의 크기를 조정합니다. */
-  z-index: 1;
-  border: none;
+.slide-img {
+  margin-left: 2%;
+}
+
+.slide2 {
+  border-radius: 3%;
+  width: 496px;
+  height: 336px;
+}
+
+.caption {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.year {
+  text-align: left;
+  margin-top: 4%;
 }
 
 .prevBtn {
-  left: 20%;
+  position: absolute;
+  margin-left: -30%;
+  margin-top: -4%;
+  border: none;
+  background-color: rgb(255, 255, 255, 0);
+  color: white;
+  font-size: 1.2em; /* 버튼의 크기를 조정합니다. */
+  z-index: 1;
 }
+
 .nextBtn {
-  left: 24%;
+  position: absolute;
+  margin-top: -4%;
+  margin-left: -27%;
+  background-color: rgb(255, 255, 255, 0);
+  border: none;
+  color: white;
+  font-size: 1.2em; /* 버튼의 크기를 조정합니다. */
+  z-index: 1;
+}
+
+.prev-button2 {
+  background-color: white;
+  border: none;
+  font-size: 1.2em;
+  position: absolute;
+  left: 15%;
+  margin-top: 1.5%;
+}
+
+.next-button2 {
+  background-color: white;
+  border: none;
+  font-size: 1.2em;
+  position: absolute;
+  margin-left: 11%;
+  margin-top: 1.5%;
 }
 
 .header {
@@ -219,10 +316,10 @@ nav a.router-link-exact-active {
 
 .text-over-image {
   position: absolute;
-  top: 30%;
-  left: 16%; /* transform 대신 left 속성을 사용하여 위치를 설정합니다. */
+  top: 40%;
+  left: 8%; /* transform 대신 left 속성을 사용하여 위치를 설정합니다. */
   color: white;
-  font-size: 350%;
+  font-size: 64px;
   text-align: start;
 }
 .img-container {
@@ -256,10 +353,26 @@ nav a.router-link-exact-active {
   color: blue;
   font-size: 22px;
   font-weight: bold;
+  margin-top: -10%;
+}
+
+.news {
+  color: blue;
+  font-size: 22px;
+  font-weight: bold;
+  margin-right: 93%;
+  margin-top: 25%;
 }
 
 .contract {
   font-size: 1.2em; /* 이 값을 조정하여 원하는 크기로 설정하실 수 있습니다. */
+  color: #000;
+}
+
+.contract2 {
+  font-size: 1.2em;
+  color: #000;
+  margin-right: 85%;
 }
 
 .image-container2 {
@@ -296,21 +409,52 @@ nav a.router-link-exact-active {
 .image-button {
   position: absolute;
   display: inline-block;
-  border: 1px solid #d6d6d6;
-  color: #d6d6d6;
+  border: 1px solid #ededed;
+  color: #ededed;
   background: transparent;
   padding: 17px 30px;
   text-decoration: none;
   border-radius: 25px;
 }
 
+.image-button2 {
+  position: absolute;
+  display: inline-block;
+  border: 1px solid #1035d1;
+  color: #1035d1;
+  background: transparent;
+  padding: 18px 34px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 100%;
+  font-weight: bold;
+  left: 1%;
+  margin-top: 5%;
+}
+
 .image-button:hover {
   background: blue;
   color: white;
 }
-.gray-box {
-  width: 200px;
-  height: 200px;
-  background-color: gray;
+
+.image-button2:hover {
+  background: blue;
+  color: white;
+}
+
+@media (max-width: 1600px) {
+  .text-over-image {
+    padding-left: 0;
+    left: 1%;
+    padding-left: 10px;
+    top: 45%;
+  }
+}
+@media (max-width: 1600px) {
+  .prevBtn,
+  .nextBtn {
+    padding-right: 40%;
+    top: 27%;
+  }
 }
 </style>

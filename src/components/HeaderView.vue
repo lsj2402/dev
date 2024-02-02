@@ -68,6 +68,8 @@ export default {
 .header {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.48);
+  display: flex;
+  align-items: center;
 }
 .header-sub-class {
   padding: 0 15px;
@@ -93,6 +95,7 @@ export default {
 }
 
 .header-class-2 {
+  width: 100%;
   display: flex;
   justify-content: flex-end;
   padding: 2rem 200px;
@@ -120,36 +123,20 @@ export default {
 .logo > img {
   width: 293px;
   height: 63px;
-  margin: 0 auto;
-  align-items: center; /* 세로 방향으로 가운데 정렬 */
-}
-
-@media (max-width: 1200px) {
-  .logo {
-    text-align: left; /* 화면 너비가 600px 이하일 때 로고를 왼쪽으로 정렬합니다 */
-  }
+  margin: 0;
+  margin: auto;
+  display: block;
 }
 
 .header-text {
   color: white;
   font-weight: bold;
+  text-align: center;
 }
-
-@media screen and (max-width: 768px) {
-  .header-class {
-    padding: 0.6rem 2rem;
-  }
-
-  .header2-claas {
-    display: none;
-  }
-
-  .header-class-2 {
-    padding: 2rem 2rem;
-  }
-
-  .header-sub-class-2 {
-    padding: 20px 20px;
+@media (max-width: 1600px) {
+  .header {
+    display: flex;
+    justify-content: center;
   }
 }
 </style>

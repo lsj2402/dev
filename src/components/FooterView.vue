@@ -10,7 +10,9 @@
 
 <script>
 export default {
-  name: "FooterView",
+  data() {
+    return {};
+  },
 };
 </script>
 
